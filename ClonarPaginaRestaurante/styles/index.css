@@ -1,4 +1,11 @@
-*{
-    padding: 0;
-    margin: 0;
+body{
+    background: #fff;
+    background-image: url(../assets/images/background-adare-restaurant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
 }
