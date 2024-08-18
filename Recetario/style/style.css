@@ -1,18 +1,107 @@
-/* styles.css */
+/* Importo la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&display=swap');
+
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #2c3e50;
-    --muted-color: #95a5a6;
+    --primary-color: #f8f4f4;
+    --background-color: #f5f2f0;
+    --text-verde: #025c28;
+    --text-color-black: #2c3e50;
+    --text-color-white: #ecf0f1;
+    --muted-color: #e9e0e0;
+    --botones: #0b7939;
+    --botones-hover: #069241;
+    --navbar-blur-bg: rgba(255, 255, 255, 0.534);
 }
 
-.container .tarjeta {
+body {
+    font-family: 'Noto Sans', sans-serif;
+    padding-top: 56px;
     background-color: var(--background-color);
+    color: var(--text-color-black);
 }
 
-.container .tarjeta :hover {
-    background-color: var(--primary-color);
+/* secion del index o donde esatara la intro */
+
+.menu {
+    background-color: var(--navbar-blur-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu .cocina {
+    color: var(--text-verde);
+    font-weight: 700;
+    font-size: large;
+}
+
+.container .titulo {
+    color: var(--text-verde)
+}
+
+/* Boton para ver mas recetas */
+.vermas {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    color: var(--text-color-white);
+    background-color: var(--botones);
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    margin-top: 20px;
+    /* Ajusta el valor según sea necesario */
+}
+
+.vermas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--botones);
+    border-radius: 15px;
+    transition: width 250ms ease;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.849);
+    z-index: -1;
+}
+
+.vermas:hover {
+    background: var(--botones-hover);
+}
+
+.info-footer {
+    background: var(--text-verde);
+}
+
+footer {
+    background: var(--primary-color);
+}
+
+/* /-----------------TARJETAS DE RECETAS */
+.container .card {
+    min-height: 100%;
+}
+
+/* ////---------------SECCION DE LA RECETA DE TAREA----------//////7 */
+/* Tarjetas */
+.container .info {
+    background-color: var(--botones);
+    color: var(--text-color-white);
+    transition: background-color 0.3s ease;
+}
+
+.container .info .textos {
+    color: var(--muted-color);
+}
+
+.container .info:hover {
+    background-color: var(--botones-hover);
     cursor: pointer;
 }
